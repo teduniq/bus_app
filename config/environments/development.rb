@@ -31,13 +31,13 @@ Rails.application.configure do
   end
   #sheltered-eyrie-26736.herokuapp.com
   #127.0.0.1:3000
-  config.action_mailer.default_url_options = { host: "sheltered-eyrie-26736.herokuapp.com" }
+  config.action_mailer.default_url_options = { host: "127.0.0.1:3000", protocol: 'https' }
 
   config.action_mailer.delivery_method = :smtp
     config.action_mailer.smtp_settings = {
       user_name:            ENV['email'],
       password:             ENV['password'],
-      domain:               ENV['sheltered-eyrie-26736.herokuapp.com'],
+      domain:               ENV['127.0.0.1:3000'],
       address:              'smtp.gmail.com',
       port:                 '587',
       authentication:       :plain,
